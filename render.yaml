@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: lellek-presence
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm install
+    startCommand: node presence-server.js
+    healthCheckPath: /v1/stats
